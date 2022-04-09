@@ -1,0 +1,219 @@
+
+\documentclass[letterpaper, 11pt]{report}
+\usepackage{titlesec}
+\usepackage{fullpage} % changes the margin
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx} %package to manage images
+\usepackage[linkcolor=red]{hyperref}
+\usepackage{paralist}
+\usepackage{subcaption}
+\graphicspath{ {./images/} }
+
+\begin{document}
+\begin{titlepage}
+\vspace*{0.7in}
+\begin{center}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=8cm]{univ_logo}
+\end{center}
+\end{figure}
+\vspace*{0.3in}
+\begin{Large}
+\textbf{SOEN 6011 : SOFTWARE ENGINEERING PROCESSES} \\
+\end{Large}
+\vspace*{0.1in}
+\begin{Large}
+\textbf{SUMMER 2021} \\
+\end{Large}
+\vspace*{0.9in}
+\begin{Large}
+\textbf{SUPER CALCULATOR} \\
+\end{Large}
+\vspace*{0.9in}
+\begin{Large}
+\textbf{PROBLEM - 1} \\
+Function Description \\
+\end{Large}
+\vspace*{0.625in}
+\rule{80mm}{0.1mm}\\
+\vspace*{0.1in}
+\begin{large}
+Authors \\
+\vspace*{0.1in}
+Rokeya Begum Keya\\
+\vspace*{0.1in}
+Kyle Taylor Lange\\
+\vspace*{0.1in}
+Sijie Min\\
+\vspace*{0.1in}
+Manimaran Palani\\ 
+\vspace*{0.3in}
+\date{\normalsize\today} 
+\end{large}
+\end{center}
+\begin{center}
+https://www.overleaf.com/project/610304de4e6b8d24f7c781b6\end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\addcontentsline{toc}{section}{a) Description of Functions}
+\section*{Description of Functions}
+\section*{\centering{PROBLEM 1 - F2: $tan(x)$}}
+\normalsize {SOEN 6011 - Summer 2021} \hfill \textbf{Rokeya Begum Keya} \\
+\textbf{ Software Engineering Processes}  \hfill \textbf{40183615} \\
+\hfill Repository address : https://github.com/Dakatsu/SOEN6011Calculator
+\\
+ \subsection*{ Tangent Function, $tan(x)$ } 
+ 
+ \normalsize{ \cite{test1} $tan(x)$ is a trigonometric function. There are many uses of tangent function for example, to find the slope of straight lines etc. By using the Unit circle, one can easily understand the tangent function. Moreover, in unit circle, one line is at the positive x-axis and the x coordinate intersects the circle is at $cos(x)$ and y coordinate intersects is at $sin(x)$. so, The tangent function is define as below: \[tan(x) = \frac{sin(x)}{cos(x)}\]
+ }
+ 
+ \subsection*{Graph}
+ \begin{center}
+\includegraphics[width= 4cm]{tan}
+\end{center}
+\begin{center}
+Graph of tangent function $ (tan(x))$\end{center}
+ \normalsize{ \cite{test1}\cite{varsitytutors}The tangent function is undefined when $x$ $=$ $\pi$ / 2 $+$ $n \pi$ (where, $n$ is integer) for which, $cos(x) = 0$. However, Tangent function does not have an amplitude. In addition, The graph intercept $x$-axis at $n\pi$ (where $n$ is integer) and in $y$-axis at $(0,0)$ point. The period of tangent function is $\pi$.
+ }
+ \\
+ \subsection*{Range}\cite{test1}\cite{varsitytutors}
+ \normalsize{ The range of $tan(x)$ is all real number $\mathbb{R}$, $(- \infty, + \infty)$. }
+ 
+ \subsection*{Domain and Co-domain}\cite{test1}\cite{varsitytutors}
+ \normalsize{The domain of tangent function is $x \in$ $\mathbb{R}$, $x$ $\neq$ $\pi$ / 2 $+$ $n \pi$ where, $n$ is an integer. The co-domain of $tan(x)$ is \((-\infty, +\infty\)).}
+ 
+ 
+ \begin{thebibliography}{}
+ 
+\bibitem{test1}
+Malambo, Priestly. "Pre-Service Mathematics Teachers' Nature of Understanding of the Tangent Function." Journal of Research and Advances in Mathematics Education 5.2 (2020): 105-118.
+
+\bibitem{varsitytutors} 
+varsitytutors.graphing tangent function. 
+\\https://www.varsitytutors.com/hotmath/hotmath$\_$help/topics/graphing-tangent-function
+
+\end{thebibliography}
+ 
+ 
+ 
+ 
+\pagebreak
+
+\section*{\centering{PROBLEM 1 - F3: Hyperbolic Sine, $sinh(x)$}}
+\normalsize {SOEN 6011 - Summer 2021} \hfill \textbf{Kyle Taylor Lange} \\
+\textbf{ Software Engineering Processes}  \hfill \textbf{27627696} \\
+\hfill Repository address : https://github.com/Dakatsu/SOEN6011Calculator
+\\\\\\\\\\
+\normalsize{The function $sinh(x)$ is known as the hyperbolic sine, and it has the following formula \cite{sinh}. 
+$$sinh(x) \equiv \frac{1}{2}(e^x-e^{-x})$$
+The character $x$ is the only variable, as $e$ is a constant roughly equivalent to 2.71828 \cite{e}.}
+\\
+\begin{figure}[h]
+ \centering
+ \includegraphics[width= 6cm]{SOEN_6011-Problem-1/images/desmos-graph-f3.png}
+  \caption{A graph of $y = sinh(x)$ generated from Desmos.com}
+\end{figure}
+\\
+\normalsize{Both the domain and co-domain of $sinh(x)$ is $\mathbb{R}$, i.e. (-$\infty$, +$\infty$). Positive values of $x$ trend toward +$\infty$, negative values of $x$ trend toward -$\infty$, and an input of 0 outputs 0.
+\\Just as the trigonometric functions sine and cosine relate to a unit circle \cite{circular}, their hyperbolic equivalents relate to the right branch of a unit hyperbola \cite{hyperbolic}. The x-coordinate of the right branch of the hyperbola at a given hyperbolic angle $a$ can be calculated with $cosh(a)$, and $sinh(a)$ will return the y-coordinate \cite{rectHyperbola}.}
+\begin{thebibliography}{}
+\bibitem{sinh}
+Hyperbolic Sine, Wolfram MathWorld.
+\\http://mathworld.wolfram.com/HyperbolicSine.html
+\bibitem{hyperbolic}
+Hyperbolic Functions, Wolfram MathWorld.
+\\http://mathworld.wolfram.com/HyperbolicFunctions.html
+\bibitem{circular}
+Circular Functions, Wolfram MathWorld.
+\\http://mathworld.wolfram.com/CircularFunctions.html
+\bibitem{e}
+e, Wolfram MathWorld.
+\\http://mathworld.wolfram.com/e.html
+\bibitem{rectHyperbola}
+Rectangular Hyperbola, Wolfram MathWorld.
+\\https://mathworld.wolfram.com/RectangularHyperbola.html
+\end{thebibliography}
+\pagebreak
+
+\section*{\centering{PROBLEM 1 - F5}}
+\normalsize {SOEN 6011 - Summer 2021} \hfill \textbf{Sijie Min}\\
+\textbf{ Software Engineering Processes}  \hfill \textbf{40152234} \\
+\hfill Repository address : https://github.com/Dakatsu/SOEN6011Calculator
+\\
+\subsection*{ Tangent Function,  \(y=ab^x\)  } Generally, the  \(y=ab^x\)  function ,$x$ is a variable, $a$ is a constant and $a>0$, $a\not = 1)$, is called an exponential function, and it is one of the important basic elementary functions. For  \(y=ab^x\) , a is a real number, \(\ b^x\)  is an exponential function, and a can be regarded as a scaling factor of the exponential function.
+\subsection*{ Graph,\(y=ab^x\) } 
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=16cm]{F5fig1}
+    \caption{An image of a galaxy}
+    \label{fig:galaxy}
+\end{figure}
+ \begin{center} 
+\end{center}
+
+\subsection*{ Range,  \(y=ab^x\) } 
+For the function\(y=ab^x\), the range of x is all real numbers. When a\(>\)0, y\in\((0,+\infty)\), When a\(<\)0,y\in\((-\infty,0)\);When a=0, y=0. The range of y is also all real numbers.
+ 
+ \begin{thebibliography}{}
+ 
+\bibitem{test1}
+Mike Spivey. "The fuzz Manual" Manual and software copyright .J. M. Spivey 1988, 1992, 2000
+
+
+\end{thebibliography}  
+
+\pagebreak
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\labelitemi}{$\star$}
+\section*{\centering{PROBLEM 1 - F7 : \(x^y\)}}
+\normalsize {SOEN 6011 - Summer 2021} \hfill \textbf{Manimaran Palani} \\
+\textbf{ Software Engineering Processes}  \hfill \textbf{40167543} \\
+\hfill Repository address : https://github.com/Dakatsu/SOEN6011Calculator
+\subsection*{Definition of \(x^y\)}
+\cite{mathInsight} Exponentiation is a mathematical operation, denoted as \(x^y\), If y is a positive integer and \(x\) is any real number, then \(x^y\) corresponds to repeated multiplication.
+ \begin{center} \(x^y\) = \(x\)*\(x\)*\(x\)*.....*\(x\) of y times \end{center}
+The expression can be called as “\(x\) raised to the power of y,” “\(x\) to the power of y,” or simply “\(x\) to the y.” Here, \(x\) is the base and y is the exponent or the power.
+\subsection*{Domain}
+\cite{mathbits} All the real numbers from -infinite to +infinite.(-\(\infty\) to \(\infty\))
+ \begin{center} $(x,y) \in \R^2 : (x \geq 0 \land y \neq 0) \lor x>0$ \end{center}
+\subsection*{Co-domain}
+A set of all positive real numbers from zero to infinite (0 to \(\infty\)) is known as the Exponentiation function
+\begin{flushleft}
+\textbf{Graph Characteristics}
+ \end{flushleft}
+\begin{flushleft}
+\cite{mathbits}\cite{wolframalpha} The \textbf{rate of change} increases (or decreases) across the graph in an exponential graph.
+\end{flushleft}
+\begin{itemize}
+\item \label{graph} The exponential graph crosses the y-axis at (0,1). 
+\item The exponential graph increases, when x \(>\) 1.
+\item The exponential graph decreases, when 0 \(<\) x \(<\) 1.
+\item The exponential graph is asymptotic to the x-axis - gets very, very close to the x-axis but, in this case, does not touch it or cross it.
+\end{itemize}
+\begin{center}
+\includegraphics[width=5cm]{x^y}
+\end{center}
+\begin{center}
+Graph crosses the y-axis at (0,1)\end{center}
+\begin{thebibliography}{}
+\bibitem{mathInsight} 
+Nykamp DQ: Basic rules for exponentiation
+\\\texttt{https://mathbitsnotebook.com/Algebra2/Exponential/EXExpFunctions.html}
+\bibitem{mathbits} 
+MathBits Teacher: Exponential Functions,
+\\\texttt{https://mathbitsnotebook.com/Algebra2/Exponential/EXExpFunctions.html}
+\bibitem{wolframalpha} 
+WolframAlpha: Domain of exponentiation function,
+\\\texttt{https://www.wolframalpha.com/input/?i=x\%5Ey}
+\end{thebibliography}
+\newpage
+\addcontentsline{toc}{section}{b) Context of Use Model}
+\section*{Context of Use Model}
+\normalsize{The users of the calculator shall be using it to calculate the result of one of the four aforementioned functions on a number. This number shall be an integer or decimal, so the digits \textit{0-9} and the decimal point must be enterable by the user. The user shall be able to select the appropriate function they wish to use, and they shall be able to press a key or button to indicate that they have finished inputting the number and wish to have the answer computed. The calculator should return the result or a message that indicates why it was unable to do so.}
+\begin{center}
+\includegraphics[width=15cm]{context_diagram}
+\end{center}
+\end{document}

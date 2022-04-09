@@ -1,0 +1,504 @@
+
+\documentclass[letterpaper, 11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx} %package to manage images
+\graphicspath{ {./images/} }
+
+\begin{document}
+\begin{titlepage}
+\vspace*{0.7in}
+\begin{center}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=8cm]{univ_logo}
+\end{center}
+\end{figure}
+\vspace*{0.3in}
+\begin{Large}
+\textbf{SOEN 6011 : SOFTWARE ENGINEERING PROCESSES} \\
+\end{Large}
+\vspace*{0.1in}
+\begin{Large}
+\textbf{SUMMER 2021} \\
+\end{Large}
+\vspace*{0.9in}
+\begin{Large}
+\textbf{SUPER CALCULATOR} \\
+\end{Large}
+\vspace*{0.625in}
+\begin{Large} 
+
+
+\textbf{PROBLEM - 2} \\
+Requirements\\\footnotesize{ISO/IEC/IEEE} 29148 Standard \\
+\end{Large}
+\vspace*{0.625in}
+\rule{80mm}{0.1mm}\\
+\vspace*{0.1in}
+\begin{large}
+Authors \\
+\vspace*{0.1in}
+Rokeya Begum Keya\\
+\vspace*{0.1in}
+Kyle Taylor Lange\\
+\vspace*{0.1in}
+Sijie Min\\
+\vspace*{0.1in}
+Manimaran Palani\\ 
+\vspace*{0.3in}
+\date{\normalsize\today} 
+\end{large}
+\end{center}
+\begin{center}
+https://www.overleaf.com/project/610304de4e6b8d24f7c781b6\end{center}
+\end{titlepage}
+
+\newpage
+\section*{\centering{PROBLEM 2 - F2: $tan(x)$}}
+\normalsize {SOEN 6011 - Summer 2021} \hfill \textbf{Rokeya Begum Keya} \\
+\textbf{ Software Engineering Processes}  \hfill \textbf{40183615} \\
+\hfill Repository address : https://github.com/Dakatsu/SOEN6011Calculator
+\\\\\\
+\section*{Assumption:} 
+The user will give integer(Degree) value of $x$ in $tan(x)$ function. The value of $tan(x)$ function will be calculated in radian.
+\\\
+\section*{Requirements:}\cite{ReqView}\cite{29148}\\
+The current section describes the requirements to implement the function $tan(x)$.
+\\\\\\
+\textbf{Requirement Id : F2-R1}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = 0^\circ $ in to the $tan(x)$ function \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives an input $x = 0^\circ $ for $tan(x)$
+\\the function may return 0 as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_tanZeroCheck\_1\\                  \end{tabular}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\textbf{Requirement Id : F2-R2}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = (Positive\ Degree) $ in to the $tan(x)$ function. \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives $x = any\ positive\ degree $ for $tan(x)$ 
+\\the function may return the approximate value of $tan( positive\ degree)$ 
+\\as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_tanFortyCheck\_2\\           \end{tabular}
+\\\\\\\
+\textbf{Requirement Id : F2-R3}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = 90^\circ $ in to the $tan(x)$ function \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives an input $x = 90^\circ $ for $tan(x)$
+\\the function may return "undefined" as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_tanNinetyCheck\_3\\                 \end{tabular}
+\\\\\\\\\\
+\textbf{Requirement Id : F2-R4}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = (Negative\ or\ Positive\ Degree) $ in to the $tan(x)$ function\\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives $x = any\ Negative\ or\ Positive\ degree $ 
+\\for which  $tan(x)$ value is Negative
+\\the function may return the approximate negative value of 
+\\$tan(Negative\ or\ Positive\ Degree)$ 
+\\as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} &F2\_tanNegativeValueCheck\_4\\                  \end{tabular}
+\\\\\\\\\\\\\\\\\\\
+\textbf{Requirement Id : F2-R5}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = (Negative\ Degree) $ in to the $tan(x)$ function\\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives $x = any\ Negative\ degree $ for $tan(x)$ 
+\\the function may return the approximate value of $tan( Negative\ degree)$ 
+\\as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_tanNegativeNumberCheck\_5\\                                       \end{tabular}
+\\\\\\\\\
+\textbf{Requirement Id : F2-R6}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = 180^\circ $ in to the $tan(x)$ function \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives an input $x = 180^\circ $ for $tan(x)$
+\\the function may return 0 as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_tanOneHundredAndEightyCheck\_6\\     \end{tabular}
+\\\\\\\\\\
+\textbf{Requirement Id : F2-R7}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = 90^\circ $ in to the $Rad(x)$  \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives an input $x = 90^\circ $ for $Rad(x)$
+\\the function may return the approximate value in radian as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_getRadCheck\_7\\    
+          \end{tabular}
+\\\\\\\\\\\\\\\\\\\
+\textbf{Requirement Id : F2-R8}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = 180^\circ $ in to the $Rad(x)$  \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives an input $x = 180^\circ $ for $Rad(x)$
+\\the function may return the approximate value $(3.14159..)$ in radian  as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_getRadOneHundredAndEightyCheck\_8\\          \end{tabular}
+\\\\\\\\\\\\
+\textbf{Requirement Id : F2-R9}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = 0^\circ $ in to the $sin(x)$ function \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives an input $x = 0^\circ $ for $sin(x)$
+\\the function may return 0 as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_getSinZeroCheck\_9\\                  \end{tabular}
+\\\\\\\\\\
+\textbf{Requirement Id : F2-R10}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = (Positive\ Degree) $ in to the $sin(x)$ function. \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives $x = any\ positive\ degree $ for $sin(x)$ 
+\\the function may return the approximate value of $sin( positive\ degree)$
+\\as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_getSinFortyCheck\_10\\                   \end{tabular}
+\\\\\\\\\\
+\textbf{Requirement Id : F2-R11}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = 0^\circ $ in to the $cos(x)$ function \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives an input $x = 0^\circ $ for $cos(x)$
+\\the function may return 1 as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_getCosZeroCheck\_11\\                  \end{tabular}
+\\\\\\\\\\\
+\textbf{Requirement Id : F2-R12}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & $x = (Positive\ Degree) $ in to the $cos(x)$ function. \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If the user gives $x = any\ positive\ degree $ for $cos(x)$ 
+\\the function may return the approximate value of $cos( positive\ degree)$
+\\as output.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F2\_getCosFortyCheck\_12\\                   \end{tabular}
+\\\\\\\\\\
+\textbf{Requirement Id : F2-R13}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & Availability \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} The system may provide the calculation to the user within four seconds.
+\end{tabular} \\
+\textbf{Owner} & Rokeya Begum Keya \\
+\textbf{Priority} & High \\
+\textbf{Type} & Non-Functional \\
+\textbf{Difficulty} & Medium \\
+                \end{tabular}
+\pagebreak
+
+\section*{\centering{PROBLEM 2 - F3: Hyperbolic Sine, $sinh(x)$}}
+\normalsize {SOEN 6011 - Summer 2021} \hfill \textbf{Kyle Taylor Lange} \\
+\textbf{ Software Engineering Processes}  \hfill \textbf{27627696} \\
+\hfill Repository address : https://github.com/Dakatsu/SOEN6011Calculator
+\\
+\section{Function Requirements}
+\section*{Requirements and Assumptions}
+The current section describes the requirements and assumptions to implement the function $sinh(x)$.
+\\\\
+\textbf{Explicit Assumptions:}  For a value to be \textit{accurate}, it shall be correct up to a specific number of decimal places. This value will be based on balancing accuracy with computation speed. Above a certain absolute input value, the function may return $\pm infinity$ due to the exponential nature of the function going beyond the range of a double floating point.
+\\\\
+
+\textbf{Requirement ID: F3-R1}\\\\
+\begin{tabular}{ll}
+\textbf{Overview}            & Input $x$ into $sinh(x)$ function.
+\\\textbf{Version}             & 1
+\\\textbf{Description}         & \begin{tabular}[c]{@{}l@{}}If the $sinh(x)$ function as given in Problem 1 receives an\\ integer or decimal input $x$, the system shall return an accurate value.\end{tabular}
+\\\textbf{Owner}               & Kyle Taylor Lange
+\\\textbf{Priority}            & High
+\\\textbf{Type}                & Functional
+\\\textbf{Difficulty}          & High
+\\\textbf{Verification Method} &                                                                     
+\end{tabular}
+\\\\
+
+\textbf{Requirement ID: F3-R2}\\\\
+\begin{tabular}{ll}
+\textbf{Overview}            & Availability
+\\\textbf{Version}             & 1
+\\\textbf{Description}         & \begin{tabular}[c]{@{}l@{}}The system may provide the calculation in F3-R1\\ to the user within three seconds.\end{tabular}
+\\\textbf{Owner}               & Kyle Taylor Lange
+\\\textbf{Priority}            & High
+\\\textbf{Type}                & Performance
+\\\textbf{Difficulty}          & Medium
+\\\textbf{Verification Method} &                                                                     
+\end{tabular}
+
+\pagebreak
+
+\section*{\centering{PROBLEM 2 - F5}}
+\normalsize {SOEN 6011 - Summer 2021} \hfill \textbf{Sijie Min} \\
+\textbf{ Software Engineering Processes}  \hfill \textbf{40152234} \\
+\hfill Repository address : https://github.com/Dakatsu/SOEN6011Calculator
+\\\\\\\\\\
+\section*{Requirements and Assumptions}
+The user will give value ofa,b and x   .a,b can be both integer and decimal, x is integer
+
+\textbf{Requirement Id : F5-R1}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & 	Sets a,b, then input x into  \(y=ab^x\) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} If a is set to 0, the output result is 0. If the x input is 0, the return result is equal to a.
+\end{tabular} \\
+\textbf{Owner} & Sijie Min \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} &F5test \\
+   \end{tabular}
+
+\textbf{Requirement Id : F5-R2}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & 	Sets a,b, then input x into  \(y=ab^x\) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} x can be entered as a positive number or a negative number.
+\end{tabular} \\
+\textbf{Owner} & Sijie Min \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} &F5test \\
+   \end{tabular}
+
+\textbf{Requirement Id : F5-R3}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & 	Availability \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} Avoid calculating x times of multiplications, but reduce the number of multiplications \\to approximately \(\sqrt x\)  times to increase the running speed.
+\end{tabular} \\
+\textbf{Owner} & Sijie Min \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & High \\
+\textbf{Verification Method} &F5test \\
+   \end{tabular}
+
+\textbf{Requirement Id : F5-R4}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & 	Availability \\
+\textbf{Version} & 2.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}} Ensure the accuracy of decimal operations to the power of decimals 
+\end{tabular} \\
+\textbf{Owner} & Sijie Min \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & High \\
+\textbf{Verification Method} &F5test \\
+   \end{tabular}
+ \begin{thebibliography}{}
+ 
+\bibitem{test1}
+Mike Spivey. "The fuzz Manual" Manual and software copyright. J. M. Spivey 1988, 1992, 2000
+
+
+\end{thebibliography}   
+ 
+\pagebreak
+
+\section*{\centering{PROBLEM 2 - F7 : \(x^y\)}}
+\normalsize {SOEN 6011 - Summer 2021} \hfill \textbf{Manimaran Palani} \\
+\textbf{ Software Engineering Processes}  \hfill \textbf{40167543} \\
+\hfill Repository address : https://github.com/Dakatsu/SOEN6011Calculator
+\\
+\section*{Requirements and Assumptions}\cite{ReqView}\cite{29148}\\
+The current section describes the requirements and assumptions to implement the function \(x^y\).
+\\\\\\
+\textbf{Explicit Assumption :}  The transcendental function \(x^y\) will be accurate and accepts input which comprises of rational and irrational numbers.
+\\\\\\\\
+\textbf{Requirement Id : F7-R1}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & X(0) to the power of Y(0) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}}If the user gives an input for X as Zero and input for Y as Zero.\\The function may return the 1 as output.
+\end{tabular} \\
+\textbf{Owner} & Manimaran Palani \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F7\_TestCase\_1\\
+\end{tabular}
+\\\\\\\\\\
+\textbf{Requirement Id : F7-R2}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & X(0) to the power of Y(Real Number) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}}If the user gives an input for X as zero and input for Y as
+\\any Real Number. The function may return zero as output.
+\end{tabular} \\
+\textbf{Owner} & Manimaran Palani \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F7\_TestCase\_2\\                                   \end{tabular}
+\\\\\\\\\\\\\\\\
+\textbf{Requirement Id : F7-R3}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & X(Positive Number) to the power of Y(0) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}}If the user gives an input for X of any positive number and\\input for Y as Zero.The function may return 1 as the output.
+\end{tabular} \\
+\textbf{Owner} & Manimaran Palani \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F7\_TestCase\_3\\                                                         \end{tabular}
+\\\\\\\\\\\\\\\\
+\textbf{Requirement Id : F7-R4}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & X(Negative Number) to the power of Y (0) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}}If the user gives an input for X of any negative number and
+\\input for Y as Zero.The function may return 1 as the output.
+\end{tabular} \\
+\textbf{Owner} & Manimaran Palani \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F7\_TestCase\_4\\
+\end{tabular}
+\\\\\\\\\\\\\\\\
+\textbf{Requirement Id : F7-R5}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & X(Positive Number) to the power of Y(1) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}}If the user gives an input for X as any positive number and input \\for Y as 1. The function may return X as the output.
+\end{tabular} \\
+\textbf{Owner} & Manimaran Palani \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F7\_TestCase\_5\\
+\end{tabular}
+\\\\\\\\\\\\\\
+\textbf{Requirement Id : F7-R6}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & X(Positive Number) to the power of Y(Positive Number) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & \begin{tabular}[c]{@{}l@{}}If the user gives an input for X as any positive number and input \\for Y as positive number. The function may return positive \\number as the output.\end{tabular} \\
+\textbf{Owner} & Manimaran Palani \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F7\_TestCase\_6\\                                    \end{tabular}
+\\\\\\\\\\\\
+\textbf{Requirement Id : F7-R7}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & X(Negative Number) to the power of Y(Positive Even Number) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & \begin{tabular}[c]{@{}l@{}}If the user gives an input for X as any Negative number and input \\for Y as positive Even number. The function may return positive \\number as the output.\end{tabular} \\
+\textbf{Owner} & Manimaran Palani \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F7\_TestCase\_6\\                                    \end{tabular}
+\\\\\\\\\\\\
+\textbf{Requirement Id : F7-R8}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & X(Negative Number) to the power of Y(Positive Odd Number) \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & \begin{tabular}[c]{@{}l@{}}If the user gives an input for X as any negative number and input \\for Y as positive odd number. The function may return negative \\number as the output.\end{tabular} \\
+\textbf{Owner} & Manimaran Palani \\
+\textbf{Priority} & High \\
+\textbf{Type} & Functional \\
+\textbf{Difficulty} & Medium \\
+\textbf{Verification Method} & F7\_TestCase\_6\\                                    \end{tabular}
+\\\\\\\\\\\\
+\textbf{Requirement Id : F7-R9}\\\\
+\begin{tabular}{ll}
+\textbf{Overview} & Availability \\
+\textbf{Version} & 1.0 \\
+\textbf{Description} & 
+\begin{tabular}[c]{@{}l@{}}The system may provide the response with output to the user \\ within finite time. \\
+\end{tabular} \\
+\textbf{Owner} & Manimaran Palani \\
+\textbf{Priority} & High \\
+\textbf{Type} & Non-Functional \\
+\textbf{Difficulty} & Medium \\
+\end{tabular}
+\begin{thebibliography}{}
+\bibitem{ReqView} 
+ReqView : Nykamp DQ: Requirements Specification Templates
+\\\texttt{https://www.reqview.com/doc/iso-iec-ieee-29148-templates}
+\bibitem{29148} 
+29148-2018-ISO/IEC/IEEE International Standard-Systems and software engineering-Life cycle processes-Requirements engineering,
+\\\texttt{https://standards.ieee.org/standard/29148-2018.html}
+\end{thebibliography}
+\end{document}
